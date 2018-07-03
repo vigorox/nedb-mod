@@ -1,0 +1,6 @@
+https://github.com/HowlingGuineapig/nedb
+
+支持 positional operator ($):
+
+EX: 要更新 zones 物件陣列中其中 no==3 的物件的值
+orbitNetDevices.db.update({id: 1, "zones.no": 3}, { $set: {'zones.$.name': "aaa"}}, (err,num)=>{console.log(err);console.log(num)})
